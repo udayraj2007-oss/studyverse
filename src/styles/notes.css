@@ -1,0 +1,79 @@
+.notes-page{
+    max-width:1200px;
+    margin:auto;
+    padding:30px 20px;
+}
+
+.notes-page h1{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.notes-page p{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.filter-group{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+.filter-group button{
+    padding:12px 22px;
+    border:none;
+    border-radius:30px;
+    background:#198754;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:bold;
+}
+
+.filter-group button:hover{
+    transform:translateY(-3px);
+    background:#146c43;
+}
+
+.notes-page h3{
+    text-align:center;
+    margin:25px 0;
+}
+/* ===========================
+   SEARCH BOX
+=========================== */
+
+.search-box{
+    max-width:600px;
+    margin:30px auto;
+}
+
+.search-box input{
+    width:100%;
+    padding:18px 22px;
+    font-size:18px;
+
+    border:none;
+    outline:none;
+
+    border-radius:50px;
+
+    background:#fff;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.search-box input:focus{
+    box-shadow:0 15px 40px rgba(25,135,84,.25);
+    transform:translateY(-2px);
+}
+
+.search-box input::placeholder{
+    color:#888;
+}

@@ -1,0 +1,24 @@
+.filters{
+display:flex;
+justify-content:center;
+gap:15px;
+margin:30px 0;
+flex-wrap:wrap;
+}
+
+.filters button{
+padding:12px 22px;
+border:none;
+border-radius:30px;
+background:#198754;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+font-weight:600;
+}
+
+.filters button:hover{
+transform:translateY(-3px);
+background:#146c43;
+}

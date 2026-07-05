@@ -1,0 +1,286 @@
+/* ===========================
+   FEATURES SECTION
+=========================== */
+
+.features{
+
+    padding:90px 20px;
+
+    background:linear-gradient(180deg,#ffffff,#f8fffb);
+
+    text-align:center;
+
+}
+
+.features h2{
+
+    font-size:42px;
+
+    color:#198754;
+
+    margin-bottom:55px;
+
+    font-weight:800;
+
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.feature-grid{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+/* ===========================
+   FEATURE CARD
+=========================== */
+
+.feature-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:24px;
+
+    padding:45px 30px;
+
+    border:1px solid rgba(255,255,255,.6);
+
+    box-shadow:
+
+        0 12px 35px rgba(0,0,0,.08);
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease,
+
+        border-color .35s ease;
+
+}
+
+/* ===========================
+   SHINE EFFECT
+=========================== */
+
+.feature-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:70%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transform:skewX(-20deg);
+
+    transition:1s;
+
+}
+
+.feature-card:hover::before{
+
+    left:140%;
+
+}
+
+/* ===========================
+   HOVER
+=========================== */
+
+.feature-card:hover{
+
+    transform:
+
+        translateY(-12px)
+
+        scale(1.03);
+
+    border-color:#198754;
+
+    box-shadow:
+
+        0 22px 45px rgba(25,135,84,.18);
+
+}
+
+/* ===========================
+   ICON
+=========================== */
+
+.feature-card svg{
+
+    font-size:50px;
+
+    margin-bottom:20px;
+
+    transition:.35s;
+
+}
+
+.feature-card:hover svg{
+
+    transform:
+
+        scale(1.15)
+
+        rotate(-6deg);
+
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.feature-card h3{
+
+    font-size:28px;
+
+    color:#198754;
+
+    margin-bottom:18px;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.feature-card p{
+
+    font-size:17px;
+
+    color:#555;
+
+    line-height:1.7;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.features{
+
+padding:70px 20px;
+
+}
+
+.features h2{
+
+font-size:34px;
+
+}
+
+.feature-grid{
+
+grid-template-columns:1fr;
+
+gap:22px;
+
+}
+
+.feature-card{
+
+padding:35px 25px;
+
+}
+
+.feature-card h3{
+
+font-size:24px;
+
+}
+
+.feature-card p{
+
+font-size:16px;
+
+}
+
+}
+.feature-card{
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.feature-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:60%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.45),
+
+transparent
+
+);
+
+transform:skewX(-25deg);
+
+transition:1s;
+
+}
+
+.feature-card:hover::before{
+
+left:150%;
+
+}

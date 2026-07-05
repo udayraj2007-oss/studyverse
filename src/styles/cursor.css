@@ -1,0 +1,40 @@
+.cursor-glow{
+
+position:fixed;
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+background:radial-gradient(
+circle,
+rgba(25,135,84,.16) 0%,
+rgba(25,135,84,.08) 40%,
+transparent 75%
+);
+
+transform:translate(-50%,-50%);
+
+pointer-events:none;
+
+z-index:0;
+
+transition:
+left .08s linear,
+top .08s linear;
+
+filter:blur(18px);
+
+}
+
+@media(max-width:768px){
+
+.cursor-glow{
+
+display:none;
+
+}
+
+}

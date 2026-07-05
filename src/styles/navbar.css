@@ -1,0 +1,152 @@
+/* ===========================
+   PREMIUM NAVBAR
+=========================== */
+
+.navbar{
+    position: sticky;
+    top: 15px;
+
+    width: 92%;
+    margin: 15px auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 35px;
+
+    background: rgba(255,255,255,.75);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,.65);
+    border-radius: 22px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.08),
+        inset 0 1px 0 rgba(255,255,255,.7);
+
+    overflow: hidden;
+
+    z-index: 999;
+    transition: .35s;
+
+    position: sticky;
+}
+
+.navbar::before{
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -150%;
+
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transform: skewX(-25deg);
+
+    transition: 1.3s;
+}
+
+.navbar:hover::before{
+    left: 160%;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    color: #198754;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.logo:hover{
+    transform: scale(1.03);
+}
+
+.logo span{
+    color: #111;
+}
+
+.nav-links{
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a{
+    position: relative;
+
+    text-decoration: none;
+
+    color: #555;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    transition: .3s;
+
+    padding: 8px 2px;
+}
+
+.nav-links a:hover{
+    color: #198754;
+    transform: translateY(-2px);
+}
+
+.nav-links a.active{
+    color: #198754;
+}
+
+.nav-links a::after{
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 3px;
+
+    border-radius: 20px;
+
+    background: #198754;
+
+    transition: .3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+    width: 100%;
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+}

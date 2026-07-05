@@ -1,0 +1,240 @@
+/* ===========================
+   STATS SECTION
+=========================== */
+
+.stats{
+
+    max-width:1100px;
+
+    margin:60px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:25px;
+
+    padding:0 20px;
+
+}
+
+/* ===========================
+   STAT CARD
+=========================== */
+
+.stat-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.6);
+
+    border-radius:22px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.08);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+}
+
+/* Shine Animation */
+
+.stat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:70%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transform:skewX(-20deg);
+
+    transition:1s;
+
+}
+
+.stat-card:hover::before{
+
+    left:140%;
+
+}
+
+/* Hover */
+
+.stat-card:hover{
+
+    transform:
+        translateY(-10px)
+        scale(1.05);
+
+    border-color:#198754;
+
+    box-shadow:
+        0 22px 45px rgba(25,135,84,.18);
+
+}
+
+/* ===========================
+   NUMBER
+=========================== */
+
+.stat-card h2{
+
+    font-size:42px;
+
+    color:#198754;
+
+    font-weight:800;
+
+    margin-bottom:12px;
+
+    transition:.3s;
+
+}
+
+.stat-card:hover h2{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.stat-card p{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#555;
+
+    margin:0;
+
+    transition:.3s;
+
+}
+
+.stat-card:hover p{
+
+    color:#198754;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:18px;
+
+}
+
+.stat-card{
+
+padding:25px 15px;
+
+}
+
+.stat-card h2{
+
+font-size:34px;
+
+}
+
+.stat-card p{
+
+font-size:16px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+}
+.stat-card{
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.stat-card::before{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:60%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.45),
+
+transparent
+
+);
+
+transform:skewX(-25deg);
+
+transition:1s;
+
+}
+
+.stat-card:hover::before{
+
+left:150%;
+
+}
